@@ -1,0 +1,2 @@
+== Rails Mongo sample startup application
+  * Integrated with mongo-ancestry example

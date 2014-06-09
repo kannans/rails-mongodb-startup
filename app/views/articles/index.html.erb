@@ -1,0 +1,16 @@
+<%= link_to 'New Article', new_article_path %>
+ 
+
+<% @articles.each do |page| %>
+  <ul>
+    <li><%= page.name %> <%= link_to 'E', edit_article_path(page) %>|
+      <%= link_to 'X', article_path(page), :method=>:delete %>
+      <div id="submenu">
+        <%= render 'submenu_pages', pages: page.root.descendants.arrange %>
+      </div>
+    </li>
+    
+  </ul>
+<% end %>
+
+<br />
